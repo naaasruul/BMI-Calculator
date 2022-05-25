@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--     
+    <h1>DOM Manipulation</h1>
+    <input type="text" placeholder="Enter your name" id="name" required>
+    <input type="number" placeholder="Enter your age" id="age" required>
+    <button onClick="buttonClicked()">Click Me!</button>
+    <p id="message"></p>
+    -->
+
+
+    <!-- function buttonClicked(){
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        // alert("Hello " + name + " " + age +" years old");
+        document.getElementById("message").innerHTML = name + " " + age + " years old"
+    } -->
+
+
+    <div class="container">
+        <h3>BMI calculator</h3>
+        <div class="img-box">Gambar<img src="" alt=""></div>
+        <div>
+        <div class="input-box">
+            <input type="number" id="berat" placeholder="masukkan berat">
+        </div>
+        <div class="input-box">
+            <input type="number" id="tinggi" placeholder="masukkan tinggi (cm)">
+        </div>
+    </div>
+        <div>
+            <button onClick="kiraBMI()">Kira BMI</button>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function kiraBMI(){
+            // berat(KG)/tinggi(M)^2
+            var berat = document.getElementById("berat").value;
+            var tinggi = document.getElementById("tinggi").value;
+            var BMI = berat / (tinggi * tinggi)
+            // var BMI = berat / (tinggi * tinggi);
+            // BMI.innerHTML = tinggi;
+            // document.getElementById("result").innerHTML = berat / (tinggi*tinggi);
+            document.getElementById("result").innerHTML = BMI;
+        }
+
+            
+    </script>
+</body>
+</html>
